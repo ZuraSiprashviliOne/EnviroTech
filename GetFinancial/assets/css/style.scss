@@ -1,0 +1,318 @@
+
+@import "variables";
+
+.btn{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+div{
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100vw;
+    overflow: hidden;
+    *{
+        box-sizing: border-box;
+    }
+}
+img{
+    // width: 100%;
+}
+.container-fluid{
+    padding-left: 250px;
+    padding-right: 250px;
+    &-x{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+#root{
+    header{
+        background-image: url('../images/back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .logo{
+
+        }
+        .texts{
+            .border-top.border-bottom{
+                border-color: rgba($light, 0.4) !important;
+            }
+        }
+        .video{
+            video{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .contacts{
+            background-color: rgba($success, 0.3);
+
+
+        }
+    }
+    main{
+        
+        .block.math{
+            
+            background-image: url('../images/rects.png');
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+        .meetpage{
+            background-image: url('../images/rects.png');
+            background-attachment: fixed;
+            background-size: cover;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            .bg_imager{
+                background-image: url('../images/tipi.png');
+                background-size: contain;
+                background-position: bottom right;
+            }
+        }
+        .subblock.meetsub{
+            img{
+                
+            padding: 20px !important;
+                width: auto;
+            }
+        }
+        .line{
+            >div{
+                background-color: $success;
+                height: 5px;
+            }
+        }
+
+        .block.offer{
+            overflow-x: hidden;
+            width: 100vw;
+            
+            background-image: url('../images/rects.png');
+            background-attachment: fixed;
+            background-size: cover;
+            
+            .container-fluid{
+                padding-right:100px;
+                margin-top: 250px;
+                position: relative;
+                .row{
+                    margin-top: -200px !important;
+                }
+            }
+            .curve{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('../images/offersbg.png');
+            }
+
+            .offer-one{
+                .image{
+                    overflow: hidden;
+                    img{
+                        transform: scale(1.4);
+                    }
+                }
+            }
+
+            .offer-two{
+            }
+
+            .values{
+                // background-position: bottom left;
+                // background-repeat: no-repeat;
+                // background-size: cover ;
+                // background-image: url('../images/mapper.png');
+                position: relative;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .pipialeft{
+                margin-bottom: 100px;
+            }
+
+            .pipia{
+                margin-top: 100px;;
+                img{
+                    margin-bottom: -75px;
+                    width: 600px;
+                }
+            }
+        }
+        .block.wait{
+            background-image: url('../images/rot.png');
+            background-position: bottom;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            .testos{
+                .image{
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                }
+                .text{
+                    >.bg-white{
+                        border-top-left-radius: 50px;
+                        border-bottom-right-radius: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 819px){
+}
+
+
+@media only screen and (max-width: $xl){
+    .container-fluid{
+        padding-left: 50px;
+        padding-right: 50px;
+        
+    }
+    header{
+        .logo{
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .texts{
+            padding-bottom: 0 !important;
+            .text-two, .text-three{
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .text-three{
+                width: 100%;
+                ul{
+                    margin: 20px 0;
+                    font-size: 20px;
+                }
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    .subblock{
+        .text-center{
+            display: block !important;
+        }
+    }
+    
+    .curve{
+        background-image: none !important;
+        background-color: $primary !important;
+        div{
+            color: white !important;
+        }
+        div.text-success{
+            color: $success !important;
+        }
+        .values{
+            background-size: 100% !important;
+            // background: $primary !important;
+            // background-image:none !important;
+        }
+    }
+    .curve{
+        background-image: none !important;
+        background-color: $primary !important;
+        div{
+            color: white !important;
+        }
+        div.text-success{
+            color: $success !important;
+        }
+        .pipia{
+            img{
+                margin: 0 auto;
+            }
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .pipialeft, .values{
+            width: 50%;
+            flex: 1 !important;
+            margin-left: 0;
+            margin-right: 0;
+            img{
+                width: 100% !important;
+            }
+            .pipia{
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+        .values{           
+            img{
+                margin: 0 auto !important;
+            }
+            // background: $primary !important;
+            // background-image:none !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .curve{
+        .row{
+            flex-direction: column !important;
+            >div{
+                width: 100%;                
+            }
+        }
+    }
+}
+    
+@media only screen and (max-width: $md){
+    .container-fluid{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    header{
+        .texts{
+            padding-bottom: 0 !important;
+            .text-two, .text-three{
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            .text-three{
+                width: 100% !important;
+                ul{
+                    margin: 20px 0;
+                    font-size: 20px;
+                }
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    .curve{
+        background-image: none !important;
+        background-color: $primary !important;
+        div{
+            color: white !important;
+        }
+        div.text-success{
+            color: $success !important;
+        }
+        .values{            
+            padding-top: 90px !important;
+            background-size: cover !important;
+            // background: $primary !important;
+            // background-image:none !important;
+        }
+    }
+}
