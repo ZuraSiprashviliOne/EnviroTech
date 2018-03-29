@@ -1,0 +1,125 @@
+
+.meta{
+  >*{
+    margin-top: 50px;
+  }
+  &-one{
+    &-left{
+      padding: 0 20px !important;
+    }
+    &-right{
+      padding: 0 20px !important;
+    }
+
+    &-description{
+      padding: 20px 0;
+    }
+
+    &-image {
+      line-height: 0;
+      img{
+        width: 100%;
+      }
+    }
+
+    &-list{
+      li {
+        padding: 5px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .fa {
+          color: #d51820;
+          font-size: 30px;
+          margin-right: 5px;
+        }
+      }
+      &-text{
+        padding-left: 5px;
+      }
+    }
+  }
+
+  &-two{
+    &-left{
+      padding: 0 20px !important;
+    }
+    &-right{
+      padding: 0 20px !important;
+    }
+    &-list{
+      li {
+        padding: 0 5px;
+        border-bottom: 1px solid #d1d1d1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+
+          .meta-two-list-right{
+            color: #d51820;
+          }
+        }
+      }
+
+      &-right{
+        font-size: 40px;
+      }
+
+      &-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 18px;
+
+        span{
+          padding: 0 2px;
+        }
+      }
+    }
+  }
+
+  &-three {
+    &-button{
+      padding: 10px 0;
+    }
+  }
+
+  &-four {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+
+    .panel {
+      margin-bottom: 15px !important;
+
+      &:nth-child(odd){
+        .panel-heading{
+          border-left: 5px solid #a94442;
+        }
+      }
+      &:nth-child(even){
+        .panel-heading{
+          border-left: 5px solid #585858;
+        }
+      }
+      .panel-heading {
+        cursor: pointer;
+
+        a {
+          display: block;
+          font-size: 20px;
+          font-weight: 600;
+          padding: 10px 15px;
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+}
