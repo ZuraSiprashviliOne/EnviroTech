@@ -28,5 +28,130 @@
 
 #body{
     color: $gray-200;
-    background-color: $gray-900;
+    background-color: $gray-200;
+    padding-top: 50px;
+}
+
+.rounded{
+    border-radius: 50px !important;
+}
+.block{
+    padding: 80px 0;
+}
+
+.mobiler{
+    .leftSide{
+
+    }
+    .rightSide{
+        .image{
+            flex: 0 0 80px;
+            img{
+                padding: 5px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+        }
+        .text{
+            flex: 1;
+        }
+    }
+    .beauty{
+        border-width: 2px !important;
+        position: relative;
+        margin-top: 200px;
+        .rect{
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            left: -25px;
+            top: 50px;
+        }
+
+        .image{
+            img{
+                margin-top: -50px;
+                margin-left: -50px;
+                border: 20px solid $gray-200;
+            }
+        }
+    }
+}
+
+.sliding{
+    overflow: hidden;
+    position: relative;
+    background: $gray-100;;
+    .slidinger{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        background: rgba($gray-400, .3);
+        transform: skewX(-20deg);
+    }
+}
+
+.retard{
+    .pats{
+        background-image: url('../images/pats.png');
+        flex: 0 0 150px;
+    }
+}
+
+.sups{
+}
+
+.footer{
+    background-color: $gray-800;
+
+    .slidinger{
+        background-color: rgba($gray-700, .2);
+    }
+
+    input, textarea, button{
+        border: 1px solid rgba($gray-100, 0.5);
+        transition: $transition-base;
+        &:hover{
+            border-color: $gray-100;
+            color: $white;
+        }
+    }
+
+    .navigation{
+        border-bottom: 1px solid rgba($white, 0.4);
+        a{
+            text-decoration: none !important;
+            border-bottom: 1px solid transparent;
+            transition: $transition-base;
+
+            &:hover{
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+    .socials{
+        .socItem{
+            .fa{
+                display: block;
+                color: $gray-700;
+                background-color: $white;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                line-height: 60px;
+                text-align: center;
+                font-size: 25px;
+                text-decoration: none !important;
+                transition: $transition-base;
+
+                &:hover{
+                    color: $gray-900;
+                }
+            }
+        }
+    }
 }

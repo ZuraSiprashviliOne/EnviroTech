@@ -21,6 +21,88 @@
     opacity: 0; } }
 #body {
   color: #e9ecef;
-  background-color: #212529; }
+  background-color: #e9ecef;
+  padding-top: 50px; }
+
+.rounded {
+  border-radius: 50px !important; }
+
+.block {
+  padding: 80px 0; }
+
+.mobiler .rightSide .image {
+  flex: 0 0 80px; }
+  .mobiler .rightSide .image img {
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; }
+.mobiler .rightSide .text {
+  flex: 1; }
+.mobiler .beauty {
+  border-width: 2px !important;
+  position: relative;
+  margin-top: 200px; }
+  .mobiler .beauty .rect {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    left: -25px;
+    top: 50px; }
+  .mobiler .beauty .image img {
+    margin-top: -50px;
+    margin-left: -50px;
+    border: 20px solid #e9ecef; }
+
+.sliding {
+  overflow: hidden;
+  position: relative;
+  background: #f8f9fa; }
+  .sliding .slidinger {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    background: rgba(206, 212, 218, 0.3);
+    transform: skewX(-20deg); }
+
+.retard .pats {
+  background-image: url("../images/pats.png");
+  flex: 0 0 150px; }
+
+.footer {
+  background-color: #343a40; }
+  .footer .slidinger {
+    background-color: rgba(73, 80, 87, 0.2); }
+  .footer input, .footer textarea, .footer button {
+    border: 1px solid rgba(248, 249, 250, 0.5);
+    transition: all 0.2s ease-in-out; }
+    .footer input:hover, .footer textarea:hover, .footer button:hover {
+      border-color: #f8f9fa;
+      color: #fff; }
+  .footer .navigation {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+    .footer .navigation a {
+      text-decoration: none !important;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease-in-out; }
+      .footer .navigation a:hover {
+        border-bottom: 1px solid #fff; }
+  .footer .socials .socItem .fa {
+    display: block;
+    color: #495057;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out; }
+    .footer .socials .socItem .fa:hover {
+      color: #212529; }
 
 /*# sourceMappingURL=style.css.map */
