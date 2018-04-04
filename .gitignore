@@ -6,6 +6,8 @@ node_modules
 
 .sass-cache
 .idea
+*.map
+
 # testing
 /coverage
 
