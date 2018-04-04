@@ -78,7 +78,8 @@ html, body {
     border: 20px solid #e9ecef; }
     @media only screen and (max-width: 992px) {
       .mobiler .beauty .image img {
-        margin: 0; } }
+        margin: 0;
+        border: 0; } }
 
 .slider {
   background-image: url("../images/headbg.png");
