@@ -6,6 +6,14 @@
     padding-right: 40px;
     border-radius: 0;
 
+    &-sm{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+}
+html, body{
+    overflow-x: hidden;
 }
 .ripple {
     width: 0;
@@ -29,7 +37,14 @@
 #body{
     color: $gray-200;
     background-color: $gray-200;
-    padding-top: 50px;
+    // padding-top: 50px;
+}
+
+.prods{
+    .c-item{
+        background-color: rgba($gray-900, .1);
+        color: $gray-900;
+    }
 }
 
 .rounded{
@@ -38,7 +53,24 @@
 .block{
     padding: 80px 0;
 }
-
+.navbar{
+    .nav-item{
+        .nav-link{
+            transition: $transition-base;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            
+        }
+        &.active{
+            .nav-link{
+                border-bottom: 3px solid $primary;
+            }
+        }
+        &:hover{
+            @extend .active;
+        }
+    }
+}
 .mobiler{
     .leftSide{
 
@@ -67,6 +99,14 @@
             position: absolute;
             left: -25px;
             top: 50px;
+
+            @media only screen and (max-width: $lg){
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 5px;
+                width: 100%;
+            }
         }
 
         .image{
@@ -74,7 +114,40 @@
                 margin-top: -50px;
                 margin-left: -50px;
                 border: 20px solid $gray-200;
+
+                @media only screen and (max-width: $lg){
+                    margin: 0;
+                }
             }
+        }
+    }
+}
+.slider{
+    background-image: url('../images/headbg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 0;
+    .cover{
+        background-color: rgba($black, 0.5);
+        padding: 100px 0;
+    }
+
+    .fa{
+        color: rgba($white, 0.7);
+        transition: $transition-base;
+        text-decoration: none !important;
+        &:hover{
+            color: $white;
+        }
+    }
+
+    @media only screen and (max-width: $md){
+        .display-1{
+            font-size: 40px;
+        }
+        .display-2{
+            font-size: 25px;
         }
     }
 }
@@ -90,8 +163,12 @@
         bottom: 0;
         right: 0;
         width: 100vw;
-        background: rgba($gray-400, .3);
+        div{
+            background: rgba($gray-400, .3);
         transform: skewX(-20deg);
+        width: 100%;
+            height: 100%;
+        }
     }
 }
 
@@ -109,7 +186,9 @@
     background-color: $gray-800;
 
     .slidinger{
-        background-color: rgba($gray-700, .2);
+        >div{
+            background-color: rgba($gray-700, .2);
+        }
     }
 
     input, textarea, button{

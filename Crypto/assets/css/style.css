@@ -2,6 +2,12 @@
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 0; }
+  .btn-sm {
+    padding-left: 20px !important;
+    padding-right: 20px !important; }
+
+html, body {
+  overflow-x: hidden; }
 
 .ripple {
   width: 0;
@@ -21,14 +27,24 @@
     opacity: 0; } }
 #body {
   color: #e9ecef;
-  background-color: #e9ecef;
-  padding-top: 50px; }
+  background-color: #e9ecef; }
+
+.prods .c-item {
+  background-color: rgba(33, 37, 41, 0.1);
+  color: #212529; }
 
 .rounded {
   border-radius: 50px !important; }
 
 .block {
   padding: 80px 0; }
+
+.navbar .nav-item .nav-link {
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  border-bottom: 3px solid transparent; }
+.navbar .nav-item.active .nav-link, .navbar .nav-item:hover .nav-link {
+  border-bottom: 3px solid #e1497b; }
 
 .mobiler .rightSide .image {
   flex: 0 0 80px; }
@@ -49,10 +65,41 @@
     position: absolute;
     left: -25px;
     top: 50px; }
+    @media only screen and (max-width: 992px) {
+      .mobiler .beauty .rect {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        width: 100%; } }
   .mobiler .beauty .image img {
     margin-top: -50px;
     margin-left: -50px;
     border: 20px solid #e9ecef; }
+    @media only screen and (max-width: 992px) {
+      .mobiler .beauty .image img {
+        margin: 0; } }
+
+.slider {
+  background-image: url("../images/headbg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 0; }
+  .slider .cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 100px 0; }
+  .slider .fa {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none !important; }
+    .slider .fa:hover {
+      color: #fff; }
+  @media only screen and (max-width: 768px) {
+    .slider .display-1 {
+      font-size: 40px; }
+    .slider .display-2 {
+      font-size: 25px; } }
 
 .sliding {
   overflow: hidden;
@@ -64,9 +111,12 @@
     left: 50%;
     bottom: 0;
     right: 0;
-    width: 100vw;
-    background: rgba(206, 212, 218, 0.3);
-    transform: skewX(-20deg); }
+    width: 100vw; }
+    .sliding .slidinger div {
+      background: rgba(206, 212, 218, 0.3);
+      transform: skewX(-20deg);
+      width: 100%;
+      height: 100%; }
 
 .retard .pats {
   background-image: url("../images/pats.png");
@@ -74,7 +124,7 @@
 
 .footer {
   background-color: #343a40; }
-  .footer .slidinger {
+  .footer .slidinger > div {
     background-color: rgba(73, 80, 87, 0.2); }
   .footer input, .footer textarea, .footer button {
     border: 1px solid rgba(248, 249, 250, 0.5);
