@@ -84,11 +84,12 @@ html, body {
 .slider {
   background-image: url("../images/headbg.png");
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding: 0; }
   .slider .cover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 100px 0; }
   .slider .fa {
     color: rgba(255, 255, 255, 0.7);
@@ -101,6 +102,9 @@ html, body {
       font-size: 40px; }
     .slider .display-2 {
       font-size: 25px; } }
+
+.news .border-primary.border-bottom {
+  border-width: 5px; }
 
 .sliding {
   overflow: hidden;
@@ -121,7 +125,24 @@ html, body {
 
 .retard .pats {
   background-image: url("../images/pats.png");
-  flex: 0 0 150px; }
+  flex: 0 0 150px;
+  opacity: 0.8; }
+
+.ret2 .pats {
+  background-image: url("../images/pats2.png");
+  flex: 0 0 150px;
+  position: relative;
+  opacity: 0.8; }
+  .ret2 .pats > div {
+    height: 5px;
+    position: absolute;
+    bottom: -20px;
+    left: 0; }
+
+.feeds {
+  padding: 0; }
+  .feeds .feeds-items {
+    background-color: #dee2e6; }
 
 .footer {
   background-color: #343a40; }

@@ -126,11 +126,13 @@ html, body{
 .slider{
     background-image: url('../images/headbg.png');
     background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 0;
+
     .cover{
-        background-color: rgba($black, 0.5);
+        background-color: rgba($black, 0.75);
         padding: 100px 0;
     }
 
@@ -150,6 +152,12 @@ html, body{
         .display-2{
             font-size: 25px;
         }
+    }
+}
+
+.news{
+    .border-primary.border-bottom{
+        border-width: 5px;
     }
 }
 
@@ -177,10 +185,34 @@ html, body{
     .pats{
         background-image: url('../images/pats.png');
         flex: 0 0 150px;
+        opacity: 0.8;
+        
+    }
+}
+
+.ret2{
+    .pats{
+        background-image: url('../images/pats2.png');
+        flex: 0 0 150px;
+        position: relative;
+        opacity: 0.8;
+        >div{
+            height: 5px;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
     }
 }
 
 .sups{
+}
+
+.feeds{
+    padding: 0;
+    .feeds-items{
+        background-color: $gray-300;
+    }
 }
 
 .footer{
@@ -214,6 +246,7 @@ html, body{
         }
     }
     .socials{
+        
         .socItem{
             .fa{
                 display: block;
@@ -235,3 +268,15 @@ html, body{
         }
     }
 }
+
+// @media only screen and (max-width: $sm){
+//     .socials{
+//         flex-wrap: wrap;
+//         .socItem{
+//             text-align: center;
+//             margin: 0;
+//             padding: 0;
+//             flex: 0 0 50%;
+//         }
+//     }
+// }
