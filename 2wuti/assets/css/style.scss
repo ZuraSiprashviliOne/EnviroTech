@@ -1,0 +1,23 @@
+
+@import "variables";
+
+.btn {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+        @font-face {
+            font-family: 'kafont3';
+            src: URL("../fonts/ka.ttf") format("truetype"); }
+
+#body{
+    background-image: url('../images/bg.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'kaFont3',sans-serif !important;
+}
+
+.cont{
+    height: 100vh;
+}
