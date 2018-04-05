@@ -39,7 +39,12 @@ html, body{
     background-color: $gray-200;
     // padding-top: 50px;
 }
-
+.block{
+    background-color: $gray-200;
+}
+.slides{
+    background-color: $gray-200;
+}
 .prods{
     .c-item{
         background-color: rgba($gray-900, .1);
@@ -151,6 +156,66 @@ html, body{
         }
         .display-2{
             font-size: 25px;
+        }
+    }
+
+    &-2{
+        @extend .slider;
+
+        .cover{
+            position: relative;
+            overflow: hidden;
+            >.line{
+                position: absolute;
+                z-index: 100;
+
+                img{
+                    transform: rotateY(180deg);
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 50px;
+                }
+                &:first-child{
+                    top: 60px;
+                    right: 0;
+                    text-align: right;
+                }
+                &:last-child{
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &-3{
+        @extend .slider;
+        
+        .cover{
+            position: relative;
+            overflow: hidden;
+            >.line{
+                position: absolute;
+                z-index: 100;
+
+                img{
+                    transform: rotateY(180deg);
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 50px;
+                }
+                &:first-child{
+                    top: 60px;
+                    right: 0;
+                    text-align: right;
+                }
+                &:last-child{
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
         }
     }
 }
