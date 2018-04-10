@@ -41,6 +41,7 @@ html, body{
 }
 .block{
     background-color: $gray-200;
+    background-image: none;
 }
 .slides{
     background-color: $gray-200;
@@ -129,12 +130,12 @@ html, body{
     }
 }
 .slider{
-    background-image: url('../images/headbg.png');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 0;
+    overflow: hidden;
 
     .cover{
         background-color: rgba($black, 0.75);
@@ -200,13 +201,47 @@ html, body{
                 z-index: 100;
 
                 img{
-                    transform: rotateY(180deg);
                     width: 80%;
                     margin: 0 auto;
                     height: 50px;
                 }
                 &:first-child{
+                    img{
+                        transform: rotateY(180deg);
+                    }
                     top: 60px;
+                    right: 0;
+                    text-align: right;
+                }
+                &:last-child{
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &-4{
+        @extend .slider-3;
+
+        .cover{
+            position: relative;
+            overflow: hidden;
+            >.line{
+                position: absolute;
+                z-index: 100;
+
+                img{
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 50px;
+                }
+                &:first-child{
+                    img{
+                        transform: rotateY(180deg);
+                    }
+                    top: 0;
                     right: 0;
                     text-align: right;
                 }
