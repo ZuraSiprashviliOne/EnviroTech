@@ -13,7 +13,7 @@
     background-size: cover;
 
     .bg-cover{
-        background-color: rgba($black, 0.4);
+        background-color: rgba($black, 0.5);
         padding: 100px 0;
     }
 }
@@ -23,13 +23,11 @@ a, button{
 }
 
 html,body{
-    width: 100vw !important;
+    width: 100%;
     overflow-x: hidden !important;
-    >*{
-        width: 100vw !important;
-        overflow-x: hidden !important;
-    }
+    min-height: 100vh;
 }
+
 
 .text-primary{
     &-1{
@@ -41,19 +39,43 @@ html,body{
 }
 
 main{
-    background-image: url('../images/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+    // background-image: url('../images/bg.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-position: center center;
+    padding-bottom: 100px !important;
+
+    *{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .swiper{
+        overflow: initial;
+        *{
+            overflow: initial;
+        }
+    }
 }
 
-#items{
+.header{
+    overflow: initial;
+    *{
+        overflow: initial;
+    }
+}
+
+#items, .car-block{
     margin: 100px 0;
 
     .line{
         height: 3px;;
     }
+}
+
+*{
+    box-sizing:border-box;
 }
 
 .navbar{
@@ -73,14 +95,32 @@ main{
 
 #items, .car-block{
 
+    
+    .btn{
+        @media only screen and (min-width: $lg){
+            padding-left: 0;
+        }
+    }
     .card-header{
+        @media only screen and (min-width: $lg){
+            padding-left: 0;
+        }
         .btn{
-
+            @media only screen and (min-width: $lg){
+                padding-left: 0;
+            }
             .text{
                 @media only screen and (max-width: $md){
                     font-size: 16px;
                 }
             }
+        }
+    }
+}
+.car-block{
+    .card-header{
+        .btn{
+            padding-left: 40px;
         }
     }
 }
@@ -96,6 +136,7 @@ main{
     height: 600px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 
     
     @media screen and (max-width:$md){
@@ -134,6 +175,7 @@ main{
     opacity: 1;
   }
 
+  
 .header{
     position: relative;
     .slidinger{
@@ -258,6 +300,7 @@ main{
 }
 
 footer.footer{
+    margin-top: -50px !important;
     background-color: $secondary;
 
     .socials{

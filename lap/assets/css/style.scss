@@ -1,0 +1,99 @@
+
+@import "variables";
+
+.btn {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#body{
+}
+
+header{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+
+    box-shadow: inset 0 0 80px 21px rgba($black, 0.4);
+
+    min-height: 80vh;
+
+    .cover{
+        min-height: inherit;
+        background-color: rgba($black, 0.5);
+
+        >.container{
+            min-height: inherit;
+        }
+
+        .border-bottom{
+            border-color: rgba($white, 0.5) !important;
+        }
+    }
+}
+
+
+#swiper{
+    .swiper-container{
+
+        .swiper-wrapper{
+            .swiper-slide{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                height: 500px;
+            }
+        }
+    }
+
+    .swiper-button-next{
+        background: none;
+        color: $white;
+        font-size: 60px;
+    }
+    .swiper-button-prev{
+        background: none;
+        color: $white;
+        font-size: 60px;
+    }
+}
+
+#footer{
+    margin-top: 100px;
+    .socials{
+        li{
+            background-color: $white;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            overflow: hidden;
+            a{
+                line-height: 60px;
+                display: block;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .form{
+        margin-top: -50px;
+        height: calc(100% + 58px);
+    }
+}
+
+
+
+@media only screen and (max-width: $lg){
+    .display-3{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: $md){
+    .display-3{
+        font-size: 35px;
+    }
+}
