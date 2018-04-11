@@ -17,7 +17,7 @@ header {
     header .cover .border-bottom {
       border-color: rgba(255, 255, 255, 0.5) !important; }
 
-html, body {
+html {
   overflow-x: hidden; }
 
 #swiper .swiper-container {
@@ -51,7 +51,7 @@ html, body {
       font-size: 30px; }
   #footer .form {
     margin-top: -50px;
-    height: calc(100% + 58px); }
+    height: calc(100% + 50px); }
 
 @media only screen and (max-width: 992px) {
   .display-3 {
