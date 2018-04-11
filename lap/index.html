@@ -9,14 +9,14 @@
     <!-- <link rel="stylesheet" href="node_modules/animate.css/animate.min.css"> -->
     <!-- <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/aos.css">
+    <!-- <link rel="stylesheet" href="assets/aos.css"> -->
     <link rel="stylesheet" href="assets/swiper.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="assets/jquery.min.js"></script>
     <script src="assets/bootstrap.min.js"></script>
-    <script src="assets/aos.js"></script>
+    <!-- <script src="assets/aos.js"></script> -->
     <script src="assets/swiper.min.js"></script>
     <script src="assets/js/script.js"></script>
 </head>
@@ -60,19 +60,19 @@
                 <div class="col-lg-5 px-0 px-lg-2" data-aos="fade-left" data-aos-once="true">
                     <form action="#" class="form p-5 bg-primary h-100">
                         <div class="input-group my-3">
-                            <input type="text" class="form-control py-3 px-2" placeholder="Your Name">
+                            <input type="text" class="form-control py-3 px-2" id="Register1FirstName" placeholder="Your Name">
                         </div>
                         <div class="input-group my-3">
-                            <input type="text" class="form-control py-3 px-2" placeholder="Your Number">
+                            <input type="text" class="form-control py-3 px-2" id="Register1Phone" placeholder="Your Number">
                         </div>
                         <div class="input-group my-3">
-                            <input type="email" class="form-control py-3 px-2" placeholder="Your E-Mail">
+                            <input type="email" class="form-control py-3 px-2" id="Register1Email" placeholder="Your E-Mail">
                         </div>
                         <div class="input-group my-3">
-                            <input type="text" class="form-control py-3 px-2" placeholder="Your Country">
+                            <input type="text" class="form-control py-3 px-2" id="Register1Country" placeholder="Your Country">
                         </div>
                         <div class="input-group my-4">
-                            <button class="btn-lg btn font-weight-bold btn-warning btn-block text-uppercase">
+                            <button id="Register1"  class="btn-lg btn font-weight-bold btn-warning btn-block text-uppercase">
                                 send
                             </button>
                         </div>
@@ -149,19 +149,19 @@
                 <div class="col-lg-5 px-0 px-lg-2" data-aos="fade-left" data-aos-once="true">
                     <form action="#" class="form p-5 bg-primary" data-aos="flip-left" data-aos-once="true">
                         <div class="input-group my-3">
-                            <input type="text" class="form-control py-3 px-2" placeholder="Your Name">
+                            <input type="text" id="Register2FirstName" class="form-control py-3 px-2" placeholder="Your Name">
                         </div>
                         <div class="input-group my-3">
-                            <input type="text" class="form-control py-3 px-2" placeholder="Your Number">
+                            <input type="text" id="Register2Phone" class="form-control py-3 px-2" placeholder="Your Number">
                         </div>
                         <div class="input-group my-3">
-                            <input type="email" class="form-control py-3 px-2" placeholder="Your E-Mail">
+                            <input type="email" id="Register2Email" class="form-control py-3 px-2" placeholder="Your E-Mail">
                         </div>
                         <div class="input-group my-3">
-                            <input type="text" class="form-control py-3 px-2" placeholder="Your Country">
+                            <input type="text" id="Register2Country" class="form-control py-3 px-2" placeholder="Your Country">
                         </div>
                         <div class="input-group my-4">
-                            <button class="btn-lg btn font-weight-bold btn-warning btn-block text-uppercase">
+                            <button id="Register2"  class="btn-lg btn font-weight-bold btn-warning btn-block text-uppercase">
                                 send
                             </button>
                         </div>
@@ -182,3 +182,137 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+<script>
+
+    $(document).ready(function(){
+        let reg1 = '#Register1';
+        let reg2 = '#register2';
+
+            $('#Register1').click(function(e){
+                var FirstName = $(reg1+"FirstName").val();
+                    var Country = $(reg1+"Country").val();
+                    var Email = $(reg1+"Email").val();
+                    var Phone = $(reg1+"Phone").val();
+                    if (FirstName === ''  || Country === '' || Email === '' || Phone === '' ) {
+                        alert('Please Fill All Fields! .');
+                    }else{
+                        
+                        e.preventDefault();
+                        $.ajax({
+                            method: "POST",
+                            url: "api.php",
+                            data: {
+                        
+                                FirstName: $(reg2+"FirstName").val(),
+                                Country: $(reg2+"Country").val(),
+                                Email: $(reg2+"Email").val(),
+                                Phone: $(reg2+"Phone").val(),
+                            },
+                            success: function(data) {
+                            
+                                var n = data.includes("ok");
+                                    if(n = data.includes("ok")){
+                                    $('#messagesent').modal('show');
+                                    }else{
+                                    $('#notsent').modal('show');
+                                }
+                            },
+                            error: function (response) {
+                                alert('error');
+                            }
+                        });
+                    }
+            });
+            $('#Register2').click(function(e){
+                alert('reg2');
+                var FirstName = $(reg2+"FirstName").val();
+                    var Country = $(reg2+"Country").val();
+                    var Email = $(reg2+"Email").val();
+                    var Phone = $(reg2+"Phone").val();
+                    if (FirstName === '' || Country === '' || Email === '' || Phone === '' ) {
+                        alert('Please Fill All Fields! .');
+                    }else{
+                        
+                        e.preventDefault();
+                        $.ajax({
+                            method: "POST",
+                            url: "api.php",
+                            data: {
+                        
+                                FirstName: $(reg2+"FirstName").val(),
+                                Country: $(reg2+"Country").val(),
+                                Email: $(reg2+"Email").val(),
+                                Phone: $(reg2+"Phone").val(),
+                            },
+                            success: function(data) {
+                            
+                                var n = data.includes("ok");
+                                    if(n = data.includes("ok")){
+                                    $('#messagesent').modal('show');
+                                    }else{
+                                    $('#notsent').modal('show');
+                                }
+                            },
+                            error: function (response) {
+                                alert('error');
+                            }
+                        });
+                    }
+            });
+    });
+    
+    </script>
+    
+    
+    
+    
+        <div class="modal fade" id="messagesent" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                       
+    
+                    </div>
+                    <div class="modal-body" style="text-align: center;">
+                        <img src="assets/images/green.png" width="100px"><br>
+                        <h4 class="modal-title" id="memberModalLabel">
+                            You have signed up successfully, our agent will contact you.
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default register_butt custom-close" data-dismiss="modal" style="background-color: rgb(140, 212, 245);
+        color: #fff;">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+        <div class="modal fade" id="notsent" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </button>
+                         
+    
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title" id="memberModalLabel">Please Enter Other Number!</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default register_butt custom-close" >Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
