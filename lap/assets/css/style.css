@@ -17,11 +17,16 @@ header {
     header .cover .border-bottom {
       border-color: rgba(255, 255, 255, 0.5) !important; }
 
-#swiper .swiper-container .swiper-wrapper .swiper-slide {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 500px; }
+html, body {
+  overflow-x: hidden; }
+
+#swiper .swiper-container {
+  overflow: hidden; }
+  #swiper .swiper-container .swiper-wrapper .swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px; }
 #swiper .swiper-button-next {
   background: none;
   color: #fff;

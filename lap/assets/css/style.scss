@@ -34,9 +34,17 @@ header{
 }
 
 
+html, body{
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: $md){
+    
+}
+
 #swiper{
     .swiper-container{
-
+        overflow: hidden;
         .swiper-wrapper{
             .swiper-slide{
                 background-repeat: no-repeat;
